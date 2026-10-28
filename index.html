@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kobuleti Info — სრული სერვისები და უძრავი ქონება ქობულეთში</title>
+  <meta name="description" content="ქობულეთის სრული სერვისების კატალოგი, ტექნიკოსები, სამრეცხაო, დალაგება, უძრავი ქონება და ადგილობრივი პროვაიდერები.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <div class="logo-mark">K</div>
+        <span class="logo-text">kobuleti<span>info</span></span>
+      </a>
+      <nav class="nav">
+        <a href="#services">სერვისები</a>
+        <a href="#properties">უძრავი ქონება</a>
+        <a href="#providers">პროვაიდერები</a>
+        <a href="#how">როგორ მუშაობს</a>
+        <a href="#request">მოთხოვნა</a>
+      </nav>
+      <div class="header-right">
+        <div class="lang">
+          <button class="lang-item active">ქარ</button>
+          <button class="lang-item">EN</button>
+          <button class="lang-item">RU</button>
+        </div>
+        <a href="#request" class="btn btn-dark">მოთხოვნის გაგზავნა</a>
+        <button class="burger" id="burger" aria-label="მენიუ"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">სერვისები</a>
+    <a href="#properties">უძრავი ქონება</a>
+    <a href="#providers">პროვაიდერები</a>
+    <a href="#how">როგორ მუშაობს</a>
+    <a href="#request" class="btn btn-dark">მოთხოვნის გაგზავნა</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge">ქობულეთი · სრული ადგილობრივი კატალოგი</div>
+        <h1>ყველა სერვისი<br><span>ერთ ადგილას</span></h1>
+        <p class="hero-lead">სრული ჩამონათვალი: სამრეცხაო, ტექნიკოსები, დალაგება, სანტექნიკა, ელექტრიკოსი, კონდიციონერი, გადატანა, უძრავი ქონება და სხვა.</p>
+
+        <div class="search-card">
+          <div class="search-tabs">
+            <button class="tab active" data-type="service">სერვისები</button>
+            <button class="tab" data-type="rent">იჯარა</button>
+            <button class="tab" data-type="buy">ყიდვა</button>
+          </div>
+          <div class="search-body">
+            <div class="field">
+              <label>რა გჭირდება</label>
+              <select id="mainSelect">
+                <option value="">აირჩიე კატეგორია</option>
+                <option value="laundry">სამრეცხაო / ქიმწმენდა</option>
+                <option value="technician">ტექნიკოსი / ხელოსანი</option>
+                <option value="cleaning">დალაგება</option>
+                <option value="plumber">სანტექნიკოსი</option>
+                <option value="electrician">ელექტრიკოსი</option>
+                <option value="ac">კონდიციონერი</option>
+                <option value="mover">გადატანა</option>
+                <option value="painter">მღებავი</option>
+                <option value="carpenter">დურგალი</option>
+                <option value="appliance">საოჯახო ტექნიკა</option>
+                <option value="garden">ეზო / ბაღი</option>
+                <option value="property">უძრავი ქონება</option>
+                <option value="other">სხვა</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>უბანი</label>
+              <select>
+                <option value="">მთელი ქობულეთი</option>
+                <option>ცენტრი</option>
+                <option>ბულვარი</option>
+                <option>სანაპირო</option>
+                <option>ახალი უბანი</option>
+                <option>ძველი ქობულეთი</option>
+                <option>ხელვაჩაური მიმართულება</option>
+              </select>
+            </div>
+            <button class="btn btn-lime search-btn" id="searchBtn">ძებნა</button>
+          </div>
+        </div>
+
+        <div class="trust">
+          <div class="trust-item"><strong>180+</strong> პროვაიდერი</div>
+          <div class="trust-item"><strong>1 200+</strong> შეკვეთა</div>
+          <div class="trust-item"><strong>4.9</strong> შეფასება</div>
+          <div class="trust-item"><strong>45+</strong> უძრავი ქონება</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Services Catalog -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-top">
+        <div>
+          <h2>სრული სერვისების ჩამონათვალი</h2>
+          <p class="section-desc">ყველა კატეგორია ქობულეთში — აირჩიე და გაგზავნე მოთხოვნა</p>
+        </div>
+      </div>
+
+      <!-- Group 1: Home Services -->
+      <div class="catalog-group">
+        <h3 class="group-title">სახლის სერვისები</h3>
+        <div class="services-grid">
+          <button class="service-card" data-service="laundry">
+            <div class="service-icon">🧺</div>
+            <div class="service-info">
+              <h3>სამრეცხაო</h3>
+              <p>რეცხვა · გაშრობა · უთო · ქიმწმენდა</p>
+            </div>
+            <span class="service-count">18</span>
+          </button>
+          <button class="service-card" data-service="cleaning">
+            <div class="service-icon">✨</div>
+            <div class="service-info">
+              <h3>დალაგება</h3>
+              <p>ბინა · ოფისი · გენერალური · ფანჯრები</p>
+            </div>
+            <span class="service-count">22</span>
+          </button>
+          <button class="service-card" data-service="ac">
+            <div class="service-icon">❄️</div>
+            <div class="service-info">
+              <h3>კონდიციონერი</h3>
+              <p>მონტაჟი · გაწმენდა · რემონტი · გაზი</p>
+            </div>
+            <span class="service-count">12</span>
+          </button>
+          <button class="service-card" data-service="appliance">
+            <div class="service-icon">🔌</div>
+            <div class="service-info">
+              <h3>საოჯახო ტექნიკა</h3>
+              <p>სარეცხი · მაცივარი · ღუმელი · სხვა</p>
+            </div>
+            <span class="service-count">14</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Group 2: Repair -->
+      <div class="catalog-group">
+        <h3 class="group-title">რემონტი და ხელოსნები</h3>
+        <div class="services-grid">
+          <button class="service-card" data-service="technician">
+            <div class="service-icon">🔧</div>
+            <div class="service-info">
+              <h3>ტექნიკოსი / ხელოსანი</h3>
+              <p>ზოგადი რემონტი · მონტაჟი · შეკეთება</p>
+            </div>
+            <span class="service-count">34</span>
+          </button>
+          <button class="service-card" data-service="plumber">
+            <div class="service-icon">🚿</div>
+            <div class="service-info">
+              <h3>სანტექნიკოსი</h3>
+              <p>მილები · ონკანები · აბაზანა · კანალიზაცია</p>
+            </div>
+            <span class="service-count">15</span>
+          </button>
+          <button class="service-card" data-service="electrician">
+            <div class="service-icon">⚡</div>
+            <div class="service-info">
+              <h3>ელექტრიკოსი</h3>
+              <p>გაყვანილობა · როზეტები · განათება · ფარი</p>
+            </div>
+            <span class="service-count">19</span>
+          </button>
+          <button class="service-card" data-service="painter">
+            <div class="service-icon">🎨</div>
+            <div class="service-info">
+              <h3>მღებავი</h3>
+              <p>კედლები · ჭერი · ფასადი · დეკორი</p>
+            </div>
+            <span class="service-count">11</span>
+          </button>
+          <button class="service-card" data-service="carpenter">
+            <div class="service-icon">🪵</div>
+            <div class="service-info">
+              <h3>დურგალი</h3>
+              <p>ავეჯი · კარები · იატაკი · თაროები</p>
+            </div>
+            <span class="service-count">9</span>
+          </button>
+          <button class="service-card" data-service="tiler">
+            <div class="service-icon">🧱</div>
+            <div class="service-info">
+              <h3>ფილების დაგება</h3>
+              <p>აბაზანა · სამზარეულო · იატაკი · კედელი</p>
+            </div>
+            <span class="service-count">8</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Group 3: Moving & Outdoor -->
+      <div class="catalog-group">
+        <h3 class="group-title">გადატანა და გარე სამუშაოები</h3>
+        <div class="services-grid">
+          <button class="service-card" data-service="mover">
+            <div class="service-icon">📦</div>
+            <div class="service-info">
+              <h3>გადატანა</h3>
+              <p>ავეჯი · ბინა · ოფისი · ტვირთი</p>
+            </div>
+            <span class="service-count">9</span>
+          </button>
+          <button class="service-card" data-service="garden">
+            <div class="service-icon">🌿</div>
+            <div class="service-info">
+              <h3>ეზო და ბაღი</h3>
+              <p>გაზონი · ხეები · სარწყავი · დასუფთავება</p>
+            </div>
+            <span class="service-count">7</span>
+          </button>
+          <button class="service-card" data-service="pest">
+            <div class="service-icon">🐜</div>
+            <div class="service-info">
+              <h3>დეზინსექცია</h3>
+              <p>მწერები · მღრღნელები · პროფილაქტიკა</p>
+            </div>
+            <span class="service-count">5</span>
+          </button>
+          <button class="service-card" data-service="security">
+            <div class="service-icon">🔒</div>
+            <div class="service-info">
+              <h3>უსაფრთხოება</h3>
+              <p>კამერები · სიგნალიზაცია · კარის საკეტი</p>
+            </div>
+            <span class="service-count">6</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Group 4: Other -->
+      <div class="catalog-group">
+        <h3 class="group-title">სხვა სერვისები</h3>
+        <div class="services-grid">
+          <button class="service-card" data-service="it">
+            <div class="service-icon">💻</div>
+            <div class="service-info">
+              <h3>IT და კომპიუტერი</h3>
+              <p>შეკეთება · დაყენება · ქსელი · პროგრამები</p>
+            </div>
+            <span class="service-count">8</span>
+          </button>
+          <button class="service-card" data-service="photo">
+            <div class="service-icon">📸</div>
+            <div class="service-info">
+              <h3>ფოტო / ვიდეო</h3>
+              <p>ღონისძიება · უძრავი ქონება · რეკლამა</p>
+            </div>
+            <span class="service-count">6</span>
+          </button>
+          <button class="service-card" data-service="tutor">
+            <div class="service-icon">📚</div>
+            <div class="service-info">
+              <h3>რეპეტიტორი</h3>
+              <p>სკოლა · ენები · უნივერსიტეტი</p>
+            </div>
+            <span class="service-count">12</span>
+          </button>
+          <button class="service-card" data-service="other">
+            <div class="service-icon">🛠️</div>
+            <div class="service-info">
+              <h3>სხვა</h3>
+              <p>ყველაფერი რაც ზემოთ არ არის</p>
+            </div>
+            <span class="service-count">20+</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties - Full list -->
+  <section class="section section-muted" id="properties">
+    <div class="container">
+      <div class="section-top">
+        <div>
+          <h2>უძრავი ქონება ქობულეთში</h2>
+          <p class="section-desc">იჯარა და გაყიდვა — ბინები, სახლები, მიწები</p>
+        </div>
+        <div class="filter-pills">
+          <button class="pill active">ყველა</button>
+          <button class="pill">იჯარა</button>
+          <button class="pill">იყიდება</button>
+        </div>
+      </div>
+
+      <div class="props-grid">
+        <article class="prop-card">
+          <div class="prop-img"><div class="prop-tag">იჯარა</div></div>
+          <div class="prop-body">
+            <div class="prop-price">1 200 ₾<span>/თვე</span></div>
+            <h3>2 ოთახიანი ბინა ბულვართან</h3>
+            <div class="prop-meta">65 მ² · 2 ოთახი · 4 სართული · ავეჯით</div>
+            <div class="prop-loc">ცენტრი, ქობულეთი</div>
+          </div>
+        </article>
+
+        <article class="prop-card">
+          <div class="prop-img prop-img-2"><div class="prop-tag tag-dark">იყიდება</div></div>
+          <div class="prop-body">
+            <div class="prop-price">185 000 ₾</div>
+            <h3>სახლი ზღვის ხედით</h3>
+            <div class="prop-meta">120 მ² · 3 ოთახი · ეზო · ავტოფარეხი</div>
+            <div class="prop-loc">სანაპირო, ქობულეთი</div>
+          </div>
+        </article>
+
+        <article class="prop-card">
+          <div class="prop-img prop-img-3"><div class="prop-tag">იჯარა</div></div>
+          <div class="prop-body">
+            <div class="prop-price">900 ₾<span>/თვე</span></div>
+            <h3>1 ოთახიანი სტუდია</h3>
+            <div class="prop-meta">42 მ² · 1 ოთახი · ახალი რემონტი</div>
+            <div class="prop-loc">ახალი უბანი</div>
+          </div>
+        </article>
+
+        <article class="prop-card">
+          <div class="prop-img prop-img-4"><div class="prop-tag tag-dark">იყიდება</div></div>
+          <div class="prop-body">
+            <div class="prop-price">95 000 ₾</div>
+            <h3>1 ოთახიანი ბინა ცენტრში</h3>
+            <div class="prop-meta">38 მ² · 1 ოთახი · 2 სართული</div>
+            <div class="prop-loc">ცენტრი, ქობულეთი</div>
+          </div>
+        </article>
+
+        <article class="prop-card">
+          <div class="prop-img prop-img-5"><div class="prop-tag">იჯარა</div></div>
+          <div class="prop-body">
+            <div class="prop-price">1 800 ₾<span>/თვე</span></div>
+            <h3>3 ოთახიანი ბინა ზღვასთან</h3>
+            <div class="prop-meta">95 მ² · 3 ოთახი · აივანი · ხედი</div>
+            <div class="prop-loc">ბულვარი, ქობულეთი</div>
+          </div>
+        </article>
+
+        <article class="prop-card">
+          <div class="prop-img prop-img-6"><div class="prop-tag tag-dark">იყიდება</div></div>
+          <div class="prop-body">
+            <div class="prop-price">320 000 ₾</div>
+            <h3>კერძო სახლი ეზოთი</h3>
+            <div class="prop-meta">180 მ² · 4 ოთახი · 600 მ² მიწა</div>
+            <div class="prop-loc">ძველი ქობულეთი</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Providers -->
+  <section class="section" id="providers">
+    <div class="container">
+      <div class="section-top">
+        <div>
+          <h2>ადგილობრივი პროვაიდერები</h2>
+          <p class="section-desc">გამოცდილი ხელოსნები და კომპანიები ქობულეთში</p>
+        </div>
+      </div>
+
+      <div class="providers-grid">
+        <div class="provider-card">
+          <div class="provider-avatar">გთ</div>
+          <div class="provider-info">
+            <h3>გიორგი ტექნიკოსი</h3>
+            <p>ტექნიკოსი · სანტექნიკა · ელექტრო</p>
+            <div class="provider-meta">
+              <span class="rating">★ 4.9</span>
+              <span>87 შეკვეთა</span>
+            </div>
+          </div>
+        </div>
+        <div class="provider-card">
+          <div class="provider-avatar">ნს</div>
+          <div class="provider-info">
+            <h3>ნინო სუფთა სახლი</h3>
+            <p>დალაგება · გენერალური</p>
+            <div class="provider-meta">
+              <span class="rating">★ 5.0</span>
+              <span>124 შეკვეთა</span>
+            </div>
+          </div>
+        </div>
+        <div class="provider-card">
+          <div class="provider-avatar">აკ</div>
+          <div class="provider-info">
+            <h3>ავთანდილ კონდიციონერი</h3>
+            <p>კონდიციონერი · მონტაჟი · სერვისი</p>
+            <div class="provider-meta">
+              <span class="rating">★ 4.8</span>
+              <span>56 შეკვეთა</span>
+            </div>
+          </div>
+        </div>
+        <div class="provider-card">
+          <div class="provider-avatar">ლმ</div>
+          <div class="provider-info">
+            <h3>ლაშა მგზავრი</h3>
+            <p>გადატანა · ტვირთი</p>
+            <div class="provider-meta">
+              <span class="rating">★ 4.9</span>
+              <span>41 შეკვეთა</span>
+            </div>
+          </div>
+        </div>
+        <div class="provider-card">
+          <div class="provider-avatar">სრ</div>
+          <div class="provider-info">
+            <h3>სამრეცხაო „სუფთა“</h3>
+            <p>სამრეცხაო · ქიმწმენდა</p>
+            <div class="provider-meta">
+              <span class="rating">★ 4.7</span>
+              <span>210 შეკვეთა</span>
+            </div>
+          </div>
+        </div>
+        <div class="provider-card">
+          <div class="provider-avatar">დხ</div>
+          <div class="provider-info">
+            <h3>დავით ხელოსანი</h3>
+            <p>დურგალი · მღებავი · ზოგადი</p>
+            <div class="provider-meta">
+              <span class="rating">★ 4.8</span>
+              <span>63 შეკვეთა</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section-muted" id="how">
+    <div class="container">
+      <div class="section-top center">
+        <div>
+          <h2>როგორ მუშაობს</h2>
+          <p class="section-desc">სამი მარტივი ნაბიჯი</p>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>აირჩიე ან აღწერე</h3>
+          <p>აირჩიე კატეგორია სრული ჩამონათვალიდან ან დაწერე რა გჭირდება. მიუთითე უბანი და დრო.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>მიიღე შეთავაზებები</h3>
+          <p>ადგილობრივი პროვაიდერები გიგზავნიან ფასს და ხელმისაწვდომობას 15–30 წუთში.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>აირჩიე და დაუკავშირდი</h3>
+          <p>შეადარე შეთავაზებები, ნახე შეფასებები და დაუკავშირდი პირდაპირ WhatsApp-ით ან ზარით.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request -->
+  <section class="section" id="request">
+    <div class="container">
+      <div class="request-card">
+        <div class="request-left">
+          <h2>გაგზავნე მოთხოვნა</h2>
+          <p>შეავსე ფორმა და მიიღე შეთავაზებები სწრაფად. უფასოა.</p>
+          <ul>
+            <li>უფასო მოთხოვნა</li>
+            <li>რამდენიმე შეთავაზება ერთდროულად</li>
+            <li>პირდაპირი კონტაქტი პროვაიდერთან</li>
+            <li>ადგილობრივი, შემოწმებული ხელოსნები</li>
+          </ul>
+        </div>
+        <form class="form" id="requestForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>სახელი</label>
+              <input type="text" name="name" placeholder="შენი სახელი" required>
+            </div>
+            <div class="form-group">
+              <label>ტელეფონი</label>
+              <input type="tel" name="phone" placeholder="5XX XX XX XX" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>რა გჭირდება</label>
+            <select name="service" id="formService" required>
+              <option value="">აირჩიე სერვისი</option>
+              <option value="laundry">სამრეცხაო / ქიმწმენდა</option>
+              <option value="cleaning">დალაგება</option>
+              <option value="ac">კონდიციონერი</option>
+              <option value="appliance">საოჯახო ტექნიკა</option>
+              <option value="technician">ტექნიკოსი / ხელოსანი</option>
+              <option value="plumber">სანტექნიკოსი</option>
+              <option value="electrician">ელექტრიკოსი</option>
+              <option value="painter">მღებავი</option>
+              <option value="carpenter">დურგალი</option>
+              <option value="tiler">ფილების დაგება</option>
+              <option value="mover">გადატანა</option>
+              <option value="garden">ეზო და ბაღი</option>
+              <option value="pest">დეზინსექცია</option>
+              <option value="security">უსაფრთხოება</option>
+              <option value="it">IT და კომპიუტერი</option>
+              <option value="photo">ფოტო / ვიდეო</option>
+              <option value="tutor">რეპეტიტორი</option>
+              <option value="property">უძრავი ქონება</option>
+              <option value="other">სხვა</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>უბანი / მისამართი</label>
+            <input type="text" name="location" placeholder="მაგ: ბულვარი, ცენტრი..." required>
+          </div>
+          <div class="form-group">
+            <label>დამატებითი დეტალები</label>
+            <textarea name="details" rows="3" placeholder="როდის გჭირდება და რა ზუსტად უნდა გაკეთდეს..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-lime btn-full">მოთხოვნის გაგზავნა</button>
+          <p class="form-note">ღილაკზე დაჭერით ეთანხმები, რომ დაგიკავშირდებიან.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="overlay" id="successOverlay">
+    <div class="modal">
+      <div class="modal-icon">✓</div>
+      <h3>მოთხოვნა გაიგზავნა</h3>
+      <p>მალე დაგიკავშირდებიან. შეამოწმე ტელეფონი.</p>
+      <button class="btn btn-dark" id="closeModal">კარგი</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-mark">K</div>
+            <span class="logo-text">kobuleti<span>info</span></span>
+          </a>
+          <p>ქობულეთის სრული სერვისების და უძრავი ქონების პლატფორმა.</p>
+        </div>
+        <div class="footer-col">
+          <h4>სერვისები</h4>
+          <a href="#services">სახლის სერვისები</a>
+          <a href="#services">რემონტი</a>
+          <a href="#services">გადატანა</a>
+          <a href="#properties">უძრავი ქონება</a>
+        </div>
+        <div class="footer-col">
+          <h4>პლატფორმა</h4>
+          <a href="#providers">პროვაიდერები</a>
+          <a href="#how">როგორ მუშაობს</a>
+          <a href="#request">მოთხოვნის გაგზავნა</a>
+        </div>
+        <div class="footer-col">
+          <h4>კონტაქტი</h4>
+          <p>ქობულეთი, საქართველო</p>
+          <p>info@kobuletiinfo.ge</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 kobuletiinfo.ge</span>
+        <span class="demo-note">დემო · სრული ჩამონათვალებით</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
